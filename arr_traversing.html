@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Structure</title>
+</head>
+
+
+<body>  
+    <input type="text" id="number">
+    <button type="submit" id="btn">Submit</button>
+
+    <script>
+
+
+
+        let data = [64,51,65,51,1544,51,65,4,89,1,45,]
+        data = [...new Set(data)]
+        data.sort((a,b) => a-b)
+        
+        for (let i = 0 ; i < data.length; i++){
+            console.log(data[i])
+        }
+
+
+        document.getElementById("btn").addEventListener("click", () =>{
+            val = document.getElementById('number').value
+            val < data.length && typeof parseInt(data) === "number" ?  alert(data[val]) : alert('write a valid Number') 
+        })
+    </script>
+</body>
+</html>

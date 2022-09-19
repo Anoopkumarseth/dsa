@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Structure</title>
+</head>
+
+
+<body>
+
+
+
+    <script>
+
+        // Indirect Recursion 
+        // let money = 100, totalApple = 0
+        // function buyApple(x) {
+        //     // console.log("I can buy Apple", x);
+        //     if (x > 0) {
+        //         console.log("i Have" , x , "Rs", totalApple);
+        //         buyMore(x)
+        //     }
+        //     else {
+        //         console.log("I do not have More Money", totalApple);
+        //     }
+        // }
+        // buyApple(money);
+
+        // function buyMore(x) {
+        //     totalApple++
+        //     // price of apple
+        //     let apple_price = 10
+        //     buyApple(x-apple_price)
+        //     // console.log("Buy More", x);            
+        // }
+
+        function one(x){
+            console.log(x);
+            if(x > 0){                
+                one(x -1)
+            }
+            console.log(x);
+        }
+
+        let data = 5;
+        one(data)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Structure</title>
+</head>
+
+
+<body>
+
+    <input type="text" name="" id="search" placeholder="search">
+    <button id="btn"> Submit</button>
+
+    <script> 
+        // let data = [96, 97, 94, 93, 92, 83, 82, 71, 62, 58, 42, 35, 26, 14, 2], search = 2, index = undefined        
+        // console.log(data)
+        // for (i=0;i<=data.length;i++)
+        //     if(data[i]===search)
+        //         index=i 
+        // console.log(index)
+
+        let data = [96, 97, 94, 93, 92, 83, 82, 71, 62, 58, 42, 35, 26, 14, 2], search, index = undefined;
+        document.getElementById('btn').addEventListener("click", ()=>{
+            let val = parseInt(document.getElementById('search').value)
+            for(i=0;i<=data.length;i++)                
+                data[i]=== val ? index = i: ''            
+            console.log(index)
+        })
+        
+
+        // JS method for search Elements
+
+        // index = data.indexOf(search)
+        // console.log(index)
+        
+
+
+    </script>
+</body>
+
+</html>

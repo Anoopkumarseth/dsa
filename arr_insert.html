@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Structure</title>
+</head>
+
+
+<body>
+    <input type="text" id="pos" placeholder="position">
+    <input type="text" id="insert" placeholder="number">
+    <button type="submit" id="btn">Submit</button>
+    <script>
+        // let data = [64, 51, 65, 51, 1544, 51, 65, 4, 89, 1, 45,], insert = 99, pos = 2
+        // data = [...new Set(data)].sort((a,b) => a-b) 
+        // console.log(data)
+        // for (let i = data.length - 1; i > 0; i--) {
+        //     i >= pos ? data[i+1] = data[i]: ''
+        //     i == pos ? data[i] = insert : ''
+        // }
+        // console.log(data)
+
+
+        let data = [64, 51, 65, 51, 1544, 51, 65, 4, 89, 1, 45,], insert, pos        
+        console.log(data)
+        document.getElementById('btn').addEventListener('click', () => {
+            insert = parseInt(document.getElementById('insert').value)
+            pos = document.getElementById('pos').value
+            for (let i = data.length - 1; i >= 0; i--) {
+                i >= pos ? data[i + 1] = data[i] : ''
+                i == pos ? data[i] = insert : ''
+            }
+            console.log(data)
+        })
+
+
+        // same Using JS methods
+
+        // let data = [64, 51, 65, 51, 1544, 51, 65, 4, 89, 1, 45,];
+        // console.log(data);
+        // data.splice(0, 0, 5)
+        // console.log(data);
+        
+
+        
+    </script>
+</body>
+
+</html>

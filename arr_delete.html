@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Structure</title>
+</head>
+
+
+<body>
+
+    <input type="text" name="" id="pos" placeholder="position">
+    <button id="btn"> Submit</button>
+
+    <script>
+        // let data = [96,97,94,93,92,83,82,71,62,58,42,35,26,14,2], pos = 1;
+        // console.log(data);
+        // for(i= pos;i < data.length-1; i++){
+        //     data[i] = data[i+1]
+        // }
+        // data.length = data.length-1;
+        // console.log(data); 
+
+
+        let data = [96, 97, 94, 93, 92, 83, 82, 71, 62, 58, 42, 35, 26, 14, 2]
+        console.log(data);
+
+
+        document.getElementById('btn').addEventListener('click', () => {
+            let pos = parseInt(document.getElementById('pos').value)
+            for (i = pos; i < data.length; i++) {
+                data[i] = data[i + 1]
+            }
+            data.length = data.length - 1;
+            console.log(data);
+        })
+
+        // JS method for delete Elements
+        
+        // data.splice(0, 1)
+        // data.splice(0, 0, 8)  // for insert
+
+
+    </script>
+</body>
+
+</html>
