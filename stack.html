@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" id="value">
+    <button id="submit">Add In Stack</button>
+    <button id="remove">remove from Stack</button>
+
+    <script>
+        // let data = [], currentSize = data.length, maxVal = 20
+        // console.log(data);
+        // // custom Push in stack 
+        // function push(newVal) {
+        //     if (maxVal > data.length) {
+        //         data[currentSize] = newVal
+        //         currentSize++
+        //     }
+        //     else {
+        //         console.log("stack is full");
+        //     }
+        // }
+
+        // function pop() {
+        //     if (currentSize > 0) {
+        //         data.length = data.length - 1
+        //         currentSize--
+        //     }
+        //     else {
+        //         console.log("stack is empty");
+        //     }
+        // }
+        // // custom pop in stack
+        // push(5)
+        // push(15)
+        // push(15)
+        // pop()
+        // pop()
+        // console.log(data);
+
+
+        let data = [], currentSize = data.length, maxVal = 20
+        document.getElementById("submit").addEventListener("click", function () {
+            push()
+        })
+        document.getElementById("remove").addEventListener("click", function () {
+            pop()
+        })
+
+
+        function push() {
+            let newVal = document.getElementById('value').value
+            if (maxVal > data.length) {
+                data[currentSize] = newVal
+                currentSize++
+            }
+            else {
+                console.log("stack is full");
+            }
+            console.log(data);
+            document.getElementById('value').value = '';
+        }
+        function pop() {
+            if (currentSize > 0) {
+                data.length = data.length - 1
+                currentSize--
+            }
+            else {
+                console.log("stack is empty");
+            }
+            console.log(data);
+        }
+
+
+    </script>
+</body>
+
+</html>
