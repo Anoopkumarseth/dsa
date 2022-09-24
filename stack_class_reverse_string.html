@@ -11,10 +11,13 @@
 <body>
     <script>
         class Stack {
-            item = []; currentSize; maxSize;
-            constructor(size) {
+            item = []; currentSize; maxSize; string; popVal;
+            constructor(size, name) {
                 this.maxSize = size;
                 this.currentSize = this.item.length;
+                this.string = name;
+                this.string = this.string.split("");
+                this.customReverse(this.string)
             }
             push(newVal) {
                 if(this.currentSize >= this.maxSize){
@@ -26,35 +29,30 @@
             }
             pop() {
                 if(this.currentSize > 0){
+                    this.popVal = item.currentSize
                     this.currentSize--;
                     this.item.length = this.currentSize;
                 } else {
                     console.log("already Empty");
                 }
+                return this.popVal
             }
+
+            customReverse(string){
+                for(let i=0;i<0;i++){
+                    this.push(this.string[i])
+                }
+            }
+            
             display() {
                 console.log(this.item);
+                console.log(this.pop());
             }
             // string reverse
         }
 
-        str1 = new Stack(5);
+        str1 = new Stack(5, "anoop");
         str1.push(50)
-        str1.push(502)
-        str1.push(0)
-        str1.push("dfg")
-        str1.push("dff")
-        str1.push("df")
-        str1.display()
-        
-        str1.pop()
-        str1.pop()
-        str1.pop()
-        str1.pop()
-        str1.pop()
-        str1.pop()
-        str1.pop()
-        str1.display()
         str1.display()
     </script>
 </body>
