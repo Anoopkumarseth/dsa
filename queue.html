@@ -23,18 +23,37 @@
         }
 
         function dequeue() {
-            if (currentSize > 0) {
+            if (!isEmpty()) {
                 for (let i = 0; i < queue.length; i++) {
                     queue[i] = queue[i + 1]
                 }
                 currentSize--
                 queue.length = currentSize
             }
-            else{
+            else {
                 console.log("queue is already empty");
             }
         }
 
+        function front() {
+            if (!isEmpty()) {
+                console.log(queue[0]);
+            } else {
+                console.log("queue is already empty");
+            }
+        }
+
+        function rear() {
+            if (!isEmpty()) {
+                console.log(queue[currentSize-1]);
+            } else {
+                console.log("queue is already empty");
+            }
+        }
+
+        function isEmpty(){
+            currentSize <= 0 ? true : false            
+        }
 
         function display() {
             console.log(queue);
@@ -45,17 +64,6 @@
         enqueue(47)
         enqueue(471)
         enqueue(71)
-        display()
-
-        dequeue()
-        display()
-        dequeue()
-        display()
-        dequeue()
-        display()
-        dequeue()
-        display()
-        dequeue()
         display()
         dequeue()
         display()
